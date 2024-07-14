@@ -11,20 +11,22 @@ function generateGrid(num) {
     for (let i = 1; i <= num * num; i++) {
         const childDiv = document.createElement('div')
         childDiv.style.cssText = `width: ${479.5 / num}px; height: ${479.5 / num}px; outline: 1px solid #36454F;`
+
         childDiv.addEventListener('mouseenter', () => {
-            childDiv.className = 'childDivColor';
+            childDiv.classList.add('childDivColor');
         })
+
         sketchPad.appendChild(childDiv)
+
+        clearGrid.addEventListener('click', () => {
+            childDiv.classList.remove('childDivColor')
+        })
     }
 }
 
 gridSize.addEventListener('click', () => {
     let num = +prompt(`Enter grid dimension`);
     generateGrid(num);
-})
-
-clearGrid.addEventListener('click', () => {
-
 })
 
 deleteGrid.addEventListener('click', () => {
