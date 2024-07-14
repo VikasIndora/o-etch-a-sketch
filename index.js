@@ -1,7 +1,13 @@
 const sketchPad = document.querySelector('.sketchPad');
 
-for (let i = 1; i <= 64; i++) {
-    const childDiv = document.createElement('div')
-    childDiv.style.cssText = "width: 50px; height: 50px; outline: 1px solid black;"
-    sketchPad.appendChild(childDiv)
+let num = +prompt(`Enter grid dimension`);
+
+function generateGrid(num) {
+    for (let i = 1; i <= num*num; i++) {
+        const childDiv = document.createElement('div')
+        childDiv.style.cssText = `width: ${479.5/num}px; height: ${479.5/num}px; outline: 1px solid #36454F;`
+        sketchPad.appendChild(childDiv)
+    }
 }
+
+generateGrid(num);

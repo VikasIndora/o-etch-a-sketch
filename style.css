@@ -1,4 +1,5 @@
 body {
+    background-color: #eee;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -7,7 +8,6 @@ body {
 
 .content {
     display: flex;
-    /* gap: 2rem; */
     width: 100%;
     justify-content: space-around;
 }
@@ -22,10 +22,9 @@ body {
 
 .sketchPad {
     display: flex;
-    /* justify-content: center;
-    align-items: center; */
     flex-wrap: wrap;
-    width: 400px;
-    height: 400px;
-    outline: 2px solid black;
+    width: 479.5px;
+    height: 479.5px;
+    outline: 2px solid #212121;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
