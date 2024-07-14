@@ -1,5 +1,8 @@
 const sketchPad = document.querySelector('.sketchPad');
 const gridSize = document.querySelector('.menu button:nth-child(2)');
+const clearGrid = document.querySelector('.menu button:nth-child(3)');
+const deleteGrid = document.querySelector('.menu button:nth-child(4)');
+
 
 function generateGrid(num) {
     while (sketchPad.firstChild) {
@@ -18,4 +21,14 @@ function generateGrid(num) {
 gridSize.addEventListener('click', () => {
     let num = +prompt(`Enter grid dimension`);
     generateGrid(num);
+})
+
+clearGrid.addEventListener('click', () => {
+
+})
+
+deleteGrid.addEventListener('click', () => {
+    while (sketchPad.firstChild) {
+        sketchPad.removeChild(sketchPad.firstChild);
+    }
 })
