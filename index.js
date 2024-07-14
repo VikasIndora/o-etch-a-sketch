@@ -1,8 +1,5 @@
 const sketchPad = document.querySelector('.sketchPad');
-const gridSize = document.querySelectorAll('.menu:nth-child(2)');
-
-
-let num = +prompt(`Enter grid dimension`);
+const gridSize = document.querySelector('.menu button:nth-child(2)');
 
 function generateGrid(num) {
     for (let i = 1; i <= num * num; i++) {
@@ -15,4 +12,7 @@ function generateGrid(num) {
     }
 }
 
-generateGrid(num);
+gridSize.addEventListener('click', () => {
+    let num = +prompt(`Enter grid dimension`);
+    generateGrid(num);
+})
