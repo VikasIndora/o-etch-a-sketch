@@ -1,11 +1,26 @@
-
-body{
+body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 2rem;
 }
 
-.sketchPad{
+.content {
+    display: flex;
+    /* gap: 2rem; */
+    width: 100%;
+    justify-content: space-around;
+}
+
+.menu{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    border: 5px double black;
+    padding: 2rem;
+}
+
+.sketchPad {
     display: flex;
     /* justify-content: center;
     align-items: center; */
